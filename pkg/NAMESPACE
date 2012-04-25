@@ -1,4 +1,4 @@
-library(memisc)
+import("memisc")
 
 export(epa2005, test.metadata)
 

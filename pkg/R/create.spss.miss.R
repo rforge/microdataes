@@ -4,7 +4,10 @@
 # Transforms metadata file into data list spss file
 ###################################################################
 
-create.spss.column <- function(file,...){
+create.spss.miss <- function(file,...){
+  return( file )
+
+  # completar el resto...
   mdat.1 <- read.table(file, header = T, sep = "\t",...)
   
   spss.column.file <- tempfile(pattern = "file", tmpdir = tempdir(), fileext = ".sps")

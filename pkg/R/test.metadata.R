@@ -4,7 +4,7 @@
 # Function intended for testing metadata files
 ###################################################################
 
-epa2005 <- function( file, md.1, md.2, md.3, encoding = "latin1" ){
+test.metadata <- function( file, md.1, md.2, md.3, encoding = "latin1" ){
   
   file.column  <- create.spss.column(md.1, encoding = encoding)
   file.var     <- create.spss.var(md.2, encoding = encoding)

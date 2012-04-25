@@ -35,7 +35,7 @@ Carlos J. Gil Bellosta
 %}
 \examples{
 # This command reads a few lines sampled from the EPA for the 1Q 2011
-sample.epa.data <- epa2005(system.file( "extdata", "sampleEPA0111.txt", package = "pxR") )
+sample.epa.data <- epa2005(system.file( "extdata", "sampleEPA0111.txt", package = "MicroDatosEs") )
 }
 
 \keyword{ manip }

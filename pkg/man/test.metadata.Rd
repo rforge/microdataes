@@ -7,7 +7,7 @@ Reads microdata using user provided metadata files
 This function reads a microdata file based on metadata provided by the user. It is particularly intended for the user to test the metadata before submitting it for inclusion in the package.
 }
 \usage{
-epa2005(file,md.1, md.2, md.3, encoding = "latin1" )
+test.metadata(file,md.1, md.2, md.3, encoding = "latin1" )
 }
 
 \arguments{
@@ -32,7 +32,7 @@ Carlos J. Gil Bellosta
 %}
 \examples{
 # This command reads a few lines sampled from the EPA for the 1Q 2011
-# sample.epa.data <- epa2005(system.file( "extdata", "sampleEPA0111.txt", package = "pxR") )
+# sample.epa.data <- epa2005(system.file( "extdata", "sampleEPA0111.txt", package = "MicroDataEs") )
 }
 
 \keyword{ manip }
