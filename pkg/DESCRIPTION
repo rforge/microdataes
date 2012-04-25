@@ -1,0 +1,16 @@
+Package: MicroDatosEs
+Type: Package
+Title: Utilities for Official Spanish Microdata
+Version: 0.01
+Date: 2012-03-05
+Encoding: UTF-8
+Author: Carlos J. Gil Bellosta
+Authors@R:c( person("Carlos J.", "Gil Bellosta", email="cgb@datanalytics.com", role='aut'))
+Maintainer: Carlos J. Gil Bellosta <cgb@datanalytics.com>
+Description: The MicroDatosEs package provides utilities for reading and processing microdata from Spanish official statistics with R
+URL: TBA
+Depends: memisc
+License: GPL-3
+LazyLoad: yes
+LazyData: yes
+
