@@ -1,4 +1,4 @@
 import("memisc")
 
-export(epa2005, test.metadata)
+export(epa2005, test.metadata, defun2011)
 
