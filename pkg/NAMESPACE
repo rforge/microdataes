@@ -1,4 +1,5 @@
 import("memisc")
+import("Hmisc")
 
-export(epa2005, test.metadata, defun2011)
+export(epa2005, test.metadata, defun2011, ees2010)
 

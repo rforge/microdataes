@@ -11,9 +11,17 @@ create.spss.vals <- function(file,...){
   
   value.labels <- mdat.2[mdat.2$tipo == "D",]
   value.labels$valor <- paste( '"', value.labels$valor, '"', sep = "")
-  value.labels$valor <- paste(value.labels$llave, value.labels$valor, sep = " ")
-  
-  tmp <- tapply(value.labels$valor, value.labels$var, function(x) paste(x, collapse = " "))
+
+  value.labels <- split(value.labels, factor(value.labels$var))
+
+  tmp <- lapply(value.labels, function(x){
+    if( ! all.is.numeric(x$llave) )
+      x$llave <- paste( "'", x$llave, "'", sep = "")
+    x$valor <- paste(x$llave, x$valor, sep = " ")
+    paste(x$valor, collapse = " ")
+  })
+
+  tmp <- unlist(tmp)
   tmp <- tmp[! is.na(tmp)]
   tmp.names <- paste( "/", names(tmp), " \n", sep = " ")
   
@@ -26,3 +34,5 @@ create.spss.vals <- function(file,...){
   
   spss.vals.file
 }
+
+
