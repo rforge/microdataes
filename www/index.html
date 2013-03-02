@@ -1,15 +1,4 @@
-
-<!-- This is the project specific website template -->
-<!-- It can be changed as liked or replaced by other content -->
-
-<?php
-
-$domain=ereg_replace('[^\.]*\.(.*)$','\1',$_SERVER['HTTP_HOST']);
-$group_name=ereg_replace('([^\.]*)\..*$','\1',$_SERVER['HTTP_HOST']);
-$themeroot='r-forge.r-project.org/themes/rforge/';
-
-echo '<?xml version="1.0" encoding="UTF-8"?>';
-?>
+<?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE html
 	PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
 	"http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
@@ -17,18 +6,20 @@ echo '<?xml version="1.0" encoding="UTF-8"?>';
 
   <head>
 	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
-	<title><?php echo $group_name; ?></title>
-	<link href="http://<?php echo $themeroot; ?>styles/estilo1.css" rel="stylesheet" type="text/css" />
+	<title>Paquete MicroDatosEs para la importación de ficheros de microdatos</title>
+	<!-- <link href="http://<?php echo $themeroot; ?>styles/estilo1.css" rel="stylesheet" type="text/css" /> -->
   </head>
 
 <body>
 
-El paquete MicroDatosEs está pensado para automatizar la lectura de ficheros de microdatos producidos por organismos estadísticos españoles (el INE y demás).
+<h1>Paquete MicroDatosEs</h1>
 
-Consta de dos partes: una estructura genérica para permitir la lectura de <em>cualquier</em> fichero de microdatos y conjuntos de ficheros de metadatos que, utilizando la estructura genérica, permiten leer ficheros concretos de microdatos.
+<p>El paquete MicroDatosEs está pensado para automatizar la lectura de ficheros de microdatos producidos por organismos estadísticos españoles (el INE y demás).</p>
+
+<p>Consta de dos partes: una estructura genérica para permitir la lectura de <em>cualquier</em> fichero de microdatos y conjuntos de ficheros de metadatos que, utilizando la estructura genérica, permiten leer ficheros concretos de microdatos.</p>
 
 
-<h2>Ejemplo de lectura de los microdatos de la EPA</h2>
+<h3>Ejemplo de lectura de los microdatos de la EPA</h3>
 
 En este ejemplo voy a utilizar los datos de la Encuesta de Población Activa del INE correspondiente al primer trimestre del 2012 que pueden descargarse de las <a href="http://www.ine.es/prodyser/micro_epa.htm">páginas del INE</a> o directamente de su <a href="ftp://www.ine.es/temas/epa/datos_1t12.zip">enlace directo</a>.
 
@@ -36,7 +27,7 @@ Se trata de un fichero comprimido que, obviamente, tenemos que descomprimir, par
 
 <div style="overflow: auto;">
 <div class="geshifilter">
-<pre class="r geshifilter-R" style="font-family: monospace;"><a href="http://inside-r.org/r-doc/base/library"><span style="color: #003399; font-weight: bold;">library</span></a><span style="color: #009900;">(</span>MicroDatosEs<span style="color: #009900;">)</span>
+<pre class="r geshifilter-R" style="font-family: monospace;"><span style="color: #003399; font-weight: bold;">library</span><span style="color: #009900;">(</span>MicroDatosEs<span style="color: #009900;">)</span>
 epa <span>&lt;-</span> epa2005<span style="color: #009900;">(</span><span style="color: #0000ff;">"EPAwebT0112"</span><span style="color: #009900;">)</span></pre>
 </div>
 </div>
@@ -46,7 +37,7 @@ se carga este fichero en R. El objeto resultante es de la clase <code>data.set</
 Para inspeccionar el contenido del objeto <code>epa</code> se puede hacer <code>summary(epa)</code> y luego seleccionar las variables de interés mediante
 <div style="overflow: auto;">
 <div class="geshifilter">
-<pre class="r geshifilter-R" style="font-family: monospace;">dat <span>&lt;-</span> <a href="http://inside-r.org/r-doc/base/subset"><span style="color: #003399; font-weight: bold;">subset</span></a><span style="color: #009900;">(</span> epa<span style="color: #339933;">,</span> select = <a href="http://inside-r.org/r-doc/base/c"><span style="color: #003399; font-weight: bold;">c</span></a><span style="color: #009900;">(</span> edad<span style="color: #339933;">,</span> sexo<span style="color: #339933;">,</span> nforma<span style="color: #339933;">,</span> aoi<span style="color: #339933;">,</span> factorel<span style="color: #009900;">)</span> <span style="color: #009900;">)</span></pre>
+<pre class="r geshifilter-R" style="font-family: monospace;">dat <span>&lt;-</span> <span style="color: #003399; font-weight: bold;">subset</span><span style="color: #009900;">(</span> epa<span style="color: #339933;">,</span> select = <span style="color: #003399; font-weight: bold;">c</span><span style="color: #009900;">(</span> edad<span style="color: #339933;">,</span> sexo<span style="color: #339933;">,</span> nforma<span style="color: #339933;">,</span> aoi<span style="color: #339933;">,</span> factorel<span style="color: #009900;">)</span> <span style="color: #009900;">)</span></pre>
 </div>
 </div>
 que corresponden a la edad, sexo, nivel de formación, estado ocupacional y el factor de elevación de los individuos encuestados. Puedo recodificar niveles así:
@@ -79,6 +70,10 @@ tasa.paro<span>$</span>factorel <span>&lt;-</span> tasa.paro<span>$</span>factor
 </div>
 </div>
 se obtiene la consabida tasa de paro para el primer trimestre del año.
+
+<h3>Más información</h3>
+
+<p>La página de desarrollo de MicroDatosEs está <a href="http://r-forge.r-project.org/projects/microdataes/"><strong>aquí</strong></a>. Contiene el código del paquete y la última versión de desarrollo del mismo.</p>
 
 </body>
 </html>
