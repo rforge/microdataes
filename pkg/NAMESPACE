@@ -1,5 +1,7 @@
-import("memisc")
-import("Hmisc")
+#import("memisc")
+#import("Hmisc")
+
+importFrom("memisc", spss.fixed.file)
+importFrom("Hmisc",  all.is.numeric)
 
 export(epa2005, test.metadata, defun2011, ees2010)
-

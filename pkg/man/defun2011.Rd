@@ -34,7 +34,9 @@ Carlos J. Gil Bellosta
 %}
 \examples{
 # This command reads a few lines sampled from the EPA for the 1Q 2011
-sample.defun.data <- defun2011(system.file( "extdata", "sampleDEFUN2010.txt", package = "MicroDatosEs") )
+sample.defun.data <- defun2011(system.file( "extdata", 
+                               "sampleDEFUN2010.txt", 
+                               package = "MicroDatosEs") )
 summary( as.data.frame( sample.defun.data ) )
 }
 

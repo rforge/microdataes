@@ -23,7 +23,6 @@ The function reads the microdata file using three standardized metadata files. F
 \value{
 A \code{\link{data.set}} as described in package \code{\link{memisc}}.
 }
-\references{}
 \author{
 Carlos J. Gil Bellosta
 }
