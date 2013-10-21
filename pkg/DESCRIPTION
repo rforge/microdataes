@@ -2,7 +2,7 @@ Package: MicroDatosEs
 Type: Package
 Title: Utilities for Official Spanish Microdata
 Version: 0.4
-Date: 2012-12-16
+Date: 2013-10-21
 Encoding: UTF-8
 Authors@R:c( person("Carlos J.", "Gil Bellosta", email="cgb@datanalytics.com", role=c('aut', 'cre')),
 		person("José Luis", "Cañadas Reche", email = "canadasreche@gmail.com", role="ctb"))
