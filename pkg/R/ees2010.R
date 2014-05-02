@@ -19,8 +19,6 @@ ees2010 <- function( ees.file ){
                               missval.file = file.missing,
                               codes.file  = file.vals )
   
-  cat("As of today, there is an error in the variables CNACE and CNO1.\n")
-
   as.data.set(ees2010)
 }
 
