@@ -6,7 +6,8 @@
 
 ees2010 <- function( ees.file ){
   
-  file.column  <- create.spss.column(system.file( "metadata", "ees_mdat1.txt", package = "MicroDatosEs" ), encoding = "latin1")
+  file.column  <- create.spss.column(system.file( "metadata", "ees_mdat1.txt", package = "MicroDatosEs" ), 
+                                     system.file( "metadata", "ees_mdat2.txt", package = "MicroDatosEs" ), encoding = "latin1")
   file.var     <- create.spss.var(system.file( "metadata", "ees_mdat1.txt", package = "MicroDatosEs" ), encoding = "latin1")
   file.vals    <- create.spss.vals(system.file( "metadata", "ees_mdat2.txt", package = "MicroDatosEs" ), encoding = "latin1")
   file.missing <- system.file( "metadata", "ees_mdat3.txt", package = "MicroDatosEs" )
