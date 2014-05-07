@@ -19,11 +19,17 @@ epa2005 <- function( epa.file ){
                               missval.file = file.missing,
                               codes.file  = file.vals )
   
-  as.data.set(epa2005)
+  
 
-	#file.mdat.1 <- system.file( "metadata", "epa_mdat1.txt", package = "MicroDatosEs" )
-	#file.mdat.2 <- system.file( "metadata", "epa_mdat2.txt", package = "MicroDatosEs", encoding = "latin1" )
-	
-	#read.fwf.microdata( epa.file, file.mdat.1, file.mdat.2 )
+  tmp <- as.data.set(epa2005)
+
+  # temporary fix until character items can be properly parsed by memisc
+  # as suggested by M. Elff in private communication
+  labels(tmp$nforma) <- NULL
+  labels(tmp$ncursr)  <- NULL
+  labels(tmp$ncurnr)  <- NULL
+
+  tmp
+
 }
 
