@@ -19,13 +19,6 @@ ees2010 <- function( ees.file ){
                               missval.file = file.missing,
                               codes.file  = file.vals )
   
-  tmp <- as.data.set(ees2010)
-  
-  # temporary fix until character items can be properly parsed by memisc
-  # as suggested by M. Elff in private communication
-  labels(tmp$cnace) <- NULL
-  labels(tmp$cno1)  <- NULL
-
-  tmp
+  fix.char.items(as.data.set(ees2010))
 }
 

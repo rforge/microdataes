@@ -21,15 +21,6 @@ epa2005 <- function( epa.file ){
   
   
 
-  tmp <- as.data.set(epa2005)
-
-  # temporary fix until character items can be properly parsed by memisc
-  # as suggested by M. Elff in private communication
-  labels(tmp$nforma) <- NULL
-  labels(tmp$ncursr)  <- NULL
-  labels(tmp$ncurnr)  <- NULL
-
-  tmp
-
+  fix.char.items(as.data.set(epa2005))
 }
 
