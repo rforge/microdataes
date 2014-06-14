@@ -27,8 +27,8 @@ By default, the function just prints a summary of the contents of the microdata 
 
 If the \code{summary} is set to \code{FALSE}, the function returns a \code{data.set}. This class is defined in package \code{memisc}. Most users will want to transform the output to a regular \code{data.frame} using function \code{as.data.frame}.
 }
-\references{
-}
+%\references{
+%}
 \author{
 Carlos J. Gil Bellosta
 }
