@@ -7,9 +7,9 @@
 censo2010 <- function(census.file, columns = NULL, summary = TRUE){
   
   file.column  <- create.spss.column(system.file( "metadata", "censo_2010_mdat1.txt", package = "MicroDatosEs" ), 
-                                     system.file( "metadata", "censo_2010_mdat2.txt", package = "MicroDatosEs" ), encoding = "utf8")
-  file.var     <- create.spss.var(system.file( "metadata", "censo_2010_mdat1.txt", package = "MicroDatosEs" ), encoding = "utf8")
-  file.vals    <- create.spss.vals(system.file( "metadata", "censo_2010_mdat2.txt", package = "MicroDatosEs" ), encoding = "utf8")
+                                     system.file( "metadata", "censo_2010_mdat2.txt", package = "MicroDatosEs" ), fileEncoding = "utf8")
+  file.var     <- create.spss.var(system.file( "metadata", "censo_2010_mdat1.txt", package = "MicroDatosEs" ), fileEncoding = "utf8")
+  file.vals    <- create.spss.vals(system.file( "metadata", "censo_2010_mdat2.txt", package = "MicroDatosEs" ), fileEncoding = "utf8")
   file.missing <- system.file( "metadata", "censo_2010_mdat3.txt", package = "MicroDatosEs" )
   
   x <- spss.fixed.file( 
