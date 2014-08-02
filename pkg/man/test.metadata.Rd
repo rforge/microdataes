@@ -7,7 +7,7 @@ Reads microdata using user provided metadata files
 This function reads a microdata file based on metadata provided by the user. It is particularly intended for the user to test the metadata before submitting it for inclusion in the package.
 }
 \usage{
-test.metadata(file,md.1, md.2, md.3, encoding = "latin1" )
+test.metadata(file,md.1, md.2, md.3, encoding = "UTF-8" )
 }
 
 \arguments{
