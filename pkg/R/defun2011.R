@@ -8,9 +8,9 @@
 defun2011 <- function( file ){
   
   file.column  <- create.spss.column(system.file( "metadata", "defun_2011_mdat1.txt", package = "MicroDatosEs" ), 
-                                     system.file( "metadata", "defun_2011_mdat2.txt", package = "MicroDatosEs" ), encoding = "UTF-8")
-  file.var     <- create.spss.var(system.file( "metadata", "defun_2011_mdat1.txt", package = "MicroDatosEs" ), encoding = "UTF-8")
-  file.vals    <- create.spss.vals(system.file( "metadata", "defun_2011_mdat2.txt", package = "MicroDatosEs" ), encoding = "UTF-8")
+                                     system.file( "metadata", "defun_2011_mdat2.txt", package = "MicroDatosEs" ), fileEncoding = "UTF-8")
+  file.var     <- create.spss.var(system.file( "metadata", "defun_2011_mdat1.txt", package = "MicroDatosEs" ), fileEncoding = "UTF-8")
+  file.vals    <- create.spss.vals(system.file( "metadata", "defun_2011_mdat2.txt", package = "MicroDatosEs" ), fileEncoding = "UTF-8")
   file.missing <- system.file( "metadata", "defun_2011_mdat3.txt", package = "MicroDatosEs" )
   
   defun2011 <- spss.fixed.file( 

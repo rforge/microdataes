@@ -7,9 +7,9 @@
 epa2005 <- function( epa.file ){
   
   file.column  <- create.spss.column(system.file( "metadata", "epa_mdat1.txt", package = "MicroDatosEs" ), 
-                                     system.file( "metadata", "epa_mdat2.txt", package = "MicroDatosEs" ), encoding = "latin1")
-  file.var     <- create.spss.var(system.file( "metadata", "epa_mdat1.txt", package = "MicroDatosEs" ), encoding = "latin1")
-  file.vals    <- create.spss.vals(system.file( "metadata", "epa_mdat2.txt", package = "MicroDatosEs" ), encoding = "latin1")
+                                     system.file( "metadata", "epa_mdat2.txt", package = "MicroDatosEs" ), fileEncoding = "latin1")
+  file.var     <- create.spss.var(system.file( "metadata", "epa_mdat1.txt", package = "MicroDatosEs" ), fileEncoding = "latin1")
+  file.vals    <- create.spss.vals(system.file( "metadata", "epa_mdat2.txt", package = "MicroDatosEs" ), fileEncoding = "latin1")
   file.missing <- system.file( "metadata", "epa_mdat3.txt", package = "MicroDatosEs" )
   
   epa2005 <- spss.fixed.file( #file = system.file( "extdata", "sampleEPA0111.txt", package = "MicroDatosEs" ),

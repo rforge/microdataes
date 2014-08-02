@@ -4,18 +4,18 @@
 # Reads a generic microdata file
 ###################################################################
 
-read.fwf.microdata <- function( file, file.mdat.1, file.mdat.2 ){
+read.fwf.microdata <- function( file, file.mdat.1, file.mdat.2, fileEncoding = "latin1" ){
 
 	## read fixed file using mdat1 metadata file
 
-	mdat.1 <- read.table( file.mdat.1, header = T, sep = "\t", encoding = "latin1" )
+	mdat.1 <- read.table( file.mdat.1, header = T, sep = "\t", fileEncoding = fileEncoding )
 	dat <- read.fwf( file, mdat.1$width, header = F, col.names = mdat.1$var )
 
 	rm( mdat.1 ); gc()
 
 	# Replaces keys in raw data by actual column values
 
-	mdat.2 <- read.table( file.mdat.2, header = T, sep = "\t", encoding = "latin1" )
+	mdat.2 <- read.table( file.mdat.2, header = T, sep = "\t", fileEncoding = fileEncoding )
 
 	assign.labels <-  function( v, var.name, mdat ){
 		tmp <- mdat[ mdat$var == var.name, ]

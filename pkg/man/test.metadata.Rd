@@ -15,7 +15,7 @@ test.metadata(file,md.1, md.2, md.3, encoding = "UTF-8" )
   \item{md.1}{ First metadata file }
   \item{md.2}{ Second metadata file }
   \item{md.3}{ Third metadata file }
-  \item{encoding}{Either 'latin1' or 'utf8', the encoding used in the metadata files}
+  \item{encoding}{Either 'latin1' or 'UTF-8', the encoding used in the metadata files}
 }
 \details{
 The function reads the microdata file using three standardized metadata files. For some microdata files, the package provides the required metadata files; however, users may be willing to load other microdata files using the package infrastructure or test metadata files before providing them to the maintainer for inclusion in it.
