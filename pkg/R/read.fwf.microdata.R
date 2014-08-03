@@ -4,12 +4,12 @@
 # Reads a generic microdata file
 ###################################################################
 
-read.fwf.microdata <- function( file, file.mdat.1, file.mdat.2, fileEncoding = "latin1" ){
+read.fwf.microdata <- function( file, file.mdat.1, file.mdat.2, fileEncoding = "UTF-8" ){
 
 	## read fixed file using mdat1 metadata file
 
 	mdat.1 <- read.table( file.mdat.1, header = T, sep = "\t", fileEncoding = fileEncoding )
-	dat <- read.fwf( file, mdat.1$width, header = F, col.names = mdat.1$var )
+	dat <- read.fwf( file, mdat.1$width, header = F, col.names = mdat.1$var, fileEncoding = fileEncoding )
 
 	rm( mdat.1 ); gc()
 
