@@ -30,14 +30,14 @@ If the \code{summary} is set to \code{FALSE}, the function returns a \code{data.
 %\references{
 %}
 \author{
-Carlos J. Gil Bellosta
+CarlosNeira with minor modifications by Carlos J. Gil Bellosta after data file format changes.
 }
 %\seealso{
 %  \code{\link{as.data.frame.px}},
 %}
 \examples{
 ## The first 1000 lines from the census file are provided within the package
-c.file <- system.file("extdata", "sampleCenso.txt", package = "MicroDatosEs")
+c.file <- system.file("extdata", "sampleCenso2010.txt", package = "MicroDatosEs")
 
 # Get a summary of the contents of the census
 censo2010(c.file)
