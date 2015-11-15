@@ -24,7 +24,7 @@ It can read the files for the 2010 survey. It might work for microdata from prev
 A \code{data.set}. This class is defined in package \code{memisc}. Most users will want to transform the output to a regular \code{data.frame} using function \code{as.data.frame}.
 }
 \references{
-  \url{http://www.ine.es/prodyser/micro_salarial.htm}
+  The INE page describing these microdata, \url{http://goo.gl/5DK2O3}.
 }
 \author{
 Carlos J. Gil Bellosta, with major contributions from Jos\'e Luis Ca\~nadas Reche.
