@@ -2652,4 +2652,6 @@ CSE	D	NA	16	"Operarios cualificados y especializados de establecimientos no agra
 CSE	D	NA	17	"Operarios sin especialización de establecimientos no agrarios"
 CSE	D	NA	18	"Profesionales de las fuerzas armadas"
 CSE	D	NA	19	"No clasificables por condicion socioeconómica"
-
+RES_ANTERIOR	D	NA	1	"Sí"
+RES_UNANO	D	NA	1	"Sí"
+RES_DANO	D	NA	1	"Sí"
